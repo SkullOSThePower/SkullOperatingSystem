@@ -2,3 +2,11 @@ body{
     background-color: black;
     color: red;
 }
+.info{
+    color:yellow;
+    font-size:30px;
+}
+.poziom{
+    color:blue;
+    font-size:15px;
+}
