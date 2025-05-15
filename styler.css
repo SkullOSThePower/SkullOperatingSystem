@@ -1,0 +1,183 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(61, 61, 61);
+    background-image: url('skullprevie2.jpg');
+      background-size: cover;
+      background-position: center;
+}
+
+header, footer {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 12px 10%;
+    width: 60%;
+    justify-content: center;
+    top: 0;
+}
+header {
+    height: 45px;
+}
+header h1 { margin: 0; font-size: 2em; }
+nav { background-color: rgb(196, 171, 255); padding: 6px 410px; font-size: 0.9em;}
+
+.main-container {
+    flex-grow: 1;
+}
+main {
+    background-color: #303030;
+    padding: 20px;
+    position:fixed;
+}
+aside {
+    background-color: #c9c9c9;
+    padding: 20px;
+}
+section.articles {
+    border: 1px dashed rgb(117, 4, 128);
+    padding: 10px;
+    min-height: 400px; 
+}
+.box1 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(114, 114, 114);
+    border: 6px solid rgb(166, 128, 255);
+    font-size: 12px;
+    width: 50%;
+    padding: 2px;
+    box-sizing: border-box;
+    color:#ffffff;
+}
+footer {
+    text-align: center;
+    margin-top: auto; 
+    padding: 15px 20px;
+}
+
+.badge {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(62, 54, 102);
+    color: rgb(212, 0, 255);
+    padding: 3px 8px;
+    font-size: 1.75em;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.box2{
+    background-color: rgb(87, 0, 68);
+    padding:40px;
+    border: 5px solid rgb(62, 53, 80);
+}
+.info{
+    color:rgb(112, 112, 0);
+    font-size:30px;
+}
+.poziom{
+    color:blue;
+    font-size:15px;
+}
+.absolute{
+    background-color: rgb(49, 0, 0);
+}
+.imposible{
+    background-color: rgb(255, 0, 0);
+}
+.hardcore{
+    background-color: #ff000083;
+}
+.hardskullos{
+    background-color: #9c0000a1;
+}
+.hard{
+    background-color: #9200006c;
+}
+.normalskullos{
+    background-color: #3b3b3b83;
+}
+.normal{
+    background-color: #1d1d1db6;
+}
+.easyskullos{
+    background-color: #2bff0034;
+}
+.easy{
+    background-color: #1eff0091;
+}
+.idiotlevel{
+    background-color: #00ff0d;
+}
+.tibeq{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: 6px solid rgb(44, 0, 114);
+    font-size: 12px;
+    padding: 2px;
+    box-sizing: border-box;
+    color:#ffffff;
+}
+.tabletab{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(114, 114, 114);
+    border: 6px solid rgba(25, 0, 255, 0.801);
+    font-size: 12px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+.tableinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
+    border: 6px solid rgba(38, 0, 59, 0.63);
+    font-size: 12px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+
+
+
+@media (max-width: 503px) {
+ nav ul li {
+ display: block;
+ margin-bottom: 7px;
+
+ }
+}
+nav ul li a:hover{
+	transform: scale(1.5);
+}
+ nav ul li a {
+ border-radius: 90px;
+ transition: background-color 0.1s ease, color 0.2s ease;
+ }
+nav ul li a{
+	text-decoration:none;
+	padding:15px 30px;
+	display:inline-block
+}
+nav ul li { 
+display: inline-block; 
+margin-right: 20px; 
+} 
+nav ul li a:hover { 
+	color:rgb(183, 0, 255)
+} 
+
+ nav ul{
+ list-style:none
+ }
+ nav ul li {
+ display: inline-block;
+ align-items: center;
+ margin-right: 15px;
+}
