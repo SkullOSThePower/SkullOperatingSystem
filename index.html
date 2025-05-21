@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Wejście</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0e0e0e, #1a1a1a);
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+}
+
+.column {
+  width: 200px;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  max-width: 300px;
+}
+
+.glass-box input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.glass-box button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00c3ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.glass-box button:hover {
+  background-color: #009cd9;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column left">
+      <h2>Informacje</h2>
+      <p>🎮 Gramy codziennie z przyjemnością!</p>
+      <p>📢 Niedługo discord i strona robią synchro</p>
+      <p>🕹️ Pixel control</p>
+    </div>
+
+    <div class="glass-box center">
+      <h1>Witaj!</h1>
+      <p>Wpisz hasło, by wejść do Skullsite</p>
+      <input type="password" id="password" placeholder="Hasło">
+      <button onclick="checkPassword()">Wejdź</button>
+      <p id="error"></p>
+    </div>
+
+    <div class="column right">
+      <h2>Nowości</h2>
+      <p>🎉 Aktualny server 1.04.6</p>
+      <p>📺 Dobra pomoc w tłumaczeniach (Kotelek na dc)</p>
+      <p>👾 Strona wchodzi oficjalnie do pierwszej Bety!</p>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      const error = document.getElementById('error');
+      if (input === '2025') {
+        window.location.href = 'mainsite.html';
+      } else {
+        error.textContent = '❌ Błędne hasło!';
+        error.style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>
