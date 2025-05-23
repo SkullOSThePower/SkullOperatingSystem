@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Główna Strona</title>
+  <style>
+  body {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 3s ease-out forwards;
+    background: #111;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    .center-content {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .glass-box {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 30px;
+      margin: auto;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .side-button {
+      position: fixed;
+      top: 45%;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px 0 0 12px;
+      cursor: pointer;
+      z-index: 11;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      transition: background 0.3s ease;
+    }
+
+    .side-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .side-button.right {
+      right: 0;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .side-button.left {
+      left: 0;
+    }
+
+    .panel {
+      position: fixed;
+      top: 0;
+      width: 350px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 30px 20px;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: 10;
+    }
+
+    .panel.right {
+      right: 0;
+      left: auto;
+      transform: translateX(100%);
+    }
+
+    .panel.open {
+      transform: translateX(0%);
+    }
+
+    .panel-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 20px;
+    }
+        a {
+      color: rgb(149, 0, 255);
+      text-decoration: none;
+      font-size: 20px;
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: inline-block;
+    }
+        a:hover {
+      transform: translateY(-3px);
+      transition: transform 0.3s ease, color 0.9 ease;
+      color: #ff0000;
+    }
+        @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .shake {
+  display: inline-block;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0%   { transform: translate(1px, 1px) rotate(0deg); }
+  10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+  20%  { transform: translate(-3px, 0px) rotate(1deg); }
+  30%  { transform: translate(3px, 2px) rotate(0deg); }
+  40%  { transform: translate(1px, -1px) rotate(1deg); }
+  50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+  60%  { transform: translate(-3px, 1px) rotate(0deg); }
+  70%  { transform: translate(3px, 1px) rotate(-1deg); }
+  80%  { transform: translate(-1px, -1px) rotate(1deg); }
+  90%  { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+  </style>
+</head>
+<body>
+<div id="main-content">
+    <div class="center-content">
+
+<video
+  src="logoskull.mp4"
+  width="150px"
+  height="400px"
+  autoplay
+  muted
+  playsinline
+  style="max-width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px;"
+  ontimeupdate="if(this.currentTime >= 14) this.pause();"
+></video>
+
+  <br>
+  <h2 class="shake">SkullOS</h2>
+</div>
+
+
+  <div class="side-button left" onclick="togglePanel('leftPanel')">🔗</div>
+  <div class="side-button right" onclick="togglePanel('rightPanel')">🔗</div>
+
+  <div class="panel" id="leftPanel">
+    <div class="panel-box">
+      <h3>SkullOS</h3>
+      <p>Server polegający na przechodzeniu map (histori) w przeróżnym kontekście</p>
+    </div>
+    <div class="panel-box">
+      <h3>PrivateOS</h3>
+      <p>Prywatny server testowy. Służy do testowania przeróżnych rzeczy.</p>
+    </div>
+    <div class="panel-box">
+      <h3>AmetystOS</h3>
+      <p>Historia ale na modach Posiada wiele różnych dodatków.</p>
+    </div>
+    <div class="panel-box">
+      <h3>EventOS</h3>
+      <p>Polega na robieniu eventów na np rangi albo jakiś gracz prowadzi server</p>
+    </div>
+    <div class="panel-box">
+      <h3>BloodStreamOS</h3>
+      <p>SkullOS ale jednorazowy, bogowie, demony i ogólnie npc się nie odradzają i server może być zagrany raz</p>
+    </div>
+    <div class="panel-box">
+      <h3>ErrorOS</h3>
+      <p>SkullOS ale na prywatnym hoscie owiele lepsza wydajność ale bez pluginów</p>
+    </div>
+  </div>
+
+
+
+  <div class="panel right" id="rightPanel">
+    <div class="panel-box">
+        <h3>Ogłoszenia</h3>
+        <a href="ipsignal.html">Łącze</a>
+    </div>
+    <div class="panel-box">
+      <h3>Zbiór potwórów i istnień</h3>
+      <a href="MonsterInformations.html">łącze</a>
+    </div>
+    <div class="panel-box">
+      <h3>Informacje do głosowania</h3>
+      <a href="rodzajeidziałanie.html">łącze</a>
+    </div>
+    <div class="panel-box">
+      <h3>Zasady świata SkullOS</h3>
+      <a href="zasadyswiata.html">łącze</a>
+    </div>
+  </div>
+
+  <div class="center-content">
+    <div class="glass-box">
+      <h2>Witamy na stronie OS</h2>
+      <p><------By dowiedzieć się więcej o rodzajach servera naciśni przycisk po lewej<br><br>
+        wejść w inne zakładki naciśni przycisk po prawej------></p>
+    </div>
+  </div>
+
+  <script>
+    function togglePanel(panelId) {
+      const panel = document.getElementById(panelId);
+      panel.classList.toggle("open");
+    }
+  </script>
+</div>
+</body>
+</html>
