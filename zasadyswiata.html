@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zasady Serwera</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #111;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .glass-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      width: 95%;
+      max-width: 900px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin: 10px 0;
+      font-size: 1.1em;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 0.6s forwards;
+    }
+
+    li:nth-child(1) { animation-delay: 0.2s; }
+    li:nth-child(2) { animation-delay: 0.4s; }
+    li:nth-child(3) { animation-delay: 0.6s; }
+    li:nth-child(4) { animation-delay: 0.8s; }
+    li:nth-child(5) { animation-delay: 1.0s; }
+    li:nth-child(6) { animation-delay: 1.2s; }
+    li:nth-child(7) { animation-delay: 1.4s; }
+    li:nth-child(8) { animation-delay: 1.6s; }
+    li:nth-child(9) { animation-delay: 1.8s; }
+    li:nth-child(10) { animation-delay: 2.0s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glass-box">
+    <h1>Zasady Serwera</h1>
+    <ol>
+      <li>1. </li>
+      <li>2. </li>
+      <li>3. </li>
+      <li>4. </li>
+      <li>5. </li>
+      <li>6. </li>
+      <li>7. </li>
+      <li>8. </li>
+      <li>9. </li>
+      <li>10. </li>
+    </ol>
+  </div>
+
+</body>
+</html>
