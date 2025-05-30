@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiele Tabel</title>
+  <style>
+    @keyframes bloodPulse {
+      0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2), inset 0 0 5px rgba(255, 0, 0, 0.1);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), inset 0 0 10px rgba(255, 0, 0, 0.3);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2), inset 0 0 5px rgba(255, 0, 0, 0.1);
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 30px;
+      background: radial-gradient(circle at top left, #1a0000, #000);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .glass-box {
+      background: rgba(60, 0, 0, 0.15);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(255, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      margin-bottom: 30px;
+      width: 95%;
+      max-width: 1200px;
+      overflow-x: auto;
+      animation: bloodPulse 5s infinite ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .glass-box:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      color: #ffe6e6;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid rgba(255, 0, 0, 0.3);
+      text-align: center;
+      font-size: 0.95em;
+    }
+
+    th {
+      background-color: rgba(100, 0, 0, 0.4);
+      color: #ffaaaa;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(90, 0, 0, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0;
+      color: #ff4d4d;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+
+    td:hover {
+      background-color: rgba(255, 0, 0, 0.1);
+      transition: 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glass-box">
+    <h2>Tabela siedmiu czaszek</h2>
+    <table>
+      <tr>
+        <td>Klucz do core 1</td>
+        <td>czaszka klucza 2 (space)</td>
+        <td>Klucz nr3 (mrok)</td>
+        <td>Klucz 4 (upadek)</td>
+        <td>Klucz 5 (umarli)</td>
+        <td>klucz 6 (zniszczenie)</td>
+        <td>Klucz 7 (kreacja)</td>
+      </tr>
+      <tr>
+        <td>zwykła</td>
+        <td>zaklęta</td>
+        <td>Przeklęta</td>
+        <td>Niematerialna</td>
+        <td>Zmarła</td>
+        <td>Destrukcja</td>
+        <td>Nasycona maną</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="glass-box">
+    <h2>Basic</h2>
+    <table>
+      <tr>
+        <td>Transporter</td>
+        <td>Robin hood</td>
+        <td>Dziki</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Transportery są różne zależy do kogo należą ale łączy je jedna funkcja wszystkie przenoszą tony przedmiotów.</td>
+        <td>Strzela z łuku i nie trafia. Robin hood ma chłopaka robina chuja.</td>
+        <td>To zmutowani ludzie z naturą. Bronią legowisk, swoich skarbów pazury ma ostre a skóre twardą gdy widzi ogień myśli po co on wogule próbuje żyć zaczyna się modlić o życie.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="glass-box">
+    <h2>Kontrolerzy</h2>
+    <table>
+      <tr>
+        <td>Wszech wizjer</td>
+        <td>Manilater</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Nie da się pokonać istoty zrobionej z energi wszechświata. Jego moc jest niewyobrażalna i każdy się kiedyś przed nią ugnię.</td>
+        <td>Tworzy armię potworów które walczą dla niego denerwujący grubasek.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="glass-box">
+    <h2>Umarli</h2>
+    <table>
+      <tr>
+        <td>zabłąkana dusza</td>
+        <td>władecyk</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Lata wszędzie pomaga albo przeszkadza, dużo osób sie ich boi. Nie wiadomo czy sie bać czy cieszyć ale pewne jest to, że to głupi pomysł im ufać.</td>
+        <td>Dusza która przed śmięrcią była bogata albo była królem lecz zgniła za złe rzeczy które robiła. Szuka złota bo myśli, że pieniądze mu pomogą w tej długiej bolesnej udręce.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+    <div class="glass-box">
+    <h2>Istoty z popiołów</h2>
+    <table>
+      <tr>
+        <td>Król demonów</td>
+        <td>Phenix</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Ten demon ma walczyć zamiast bogów piekła jego jedynym celem jest kłamanie, że jest królem tylko po to, by bóg nie musiał walczyć i ryzykować własną śmiercią		</td>
+        <td>Najrzadzsza postać z popiołu zrzuca pióra i lubi sokoły</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+    <div class="glass-box">
+    <h2>Demony Netheru</h2>
+    <table>
+      <tr>
+        <td>kanibichi(Demon wzroku)</td>
+        <td>GongonLanDemon dzwięku</td>
+        <td>Arumatis</td>
+        <td>Halubimes</td>
+        <td>polainczyk</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Demon który skręca kark gdy nie patrzysz ale tylko jak nie patrzysz. Boi się wzroku jakiego kolwiek śmiertelnika.</td>
+        <td>Demon który tylko słyszy, wszystko zniszczy wszystko na swojej drodze legendy mówią, że nawet bedrock się przed nim kłania.</td>
+        <td>Demon który nie cofnie się przed niczym zabije każdego na swojej drodze nawet właną rodzine by pokazać światu, że jest lepszy.</td>
+        <td>Żyje w lesie i zabija niezliczone ilości. Wyczuwa mięso które pragnie. Osoby które się go nie boją uważa za najlepsze kąski strach czasami może pomóc go uniknąć.</td>
+        <td>Polski demon który jak nie dostanie vódki to się nie odczepi gnębi aż do dostania alkocholu zabijać nie zabija ale wkurwia w cholere.</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+    <div class="glass-box">
+    <h2>Stwory Overworld</h2>
+    <table>
+      <tr>
+        <td>Stalowy golem</td>
+        <td>Elitarny golem</td>
+        <td>Ludek</td>
+        <td>Przemierznik</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>jest silniejszą wersją żelaznego golema ma 3 paski życia i stalowe pięści są naprawde miłe w dotyku :</td>
+        <td>Jest kawałem skurwiela</td>
+        <td>Nic nie robią specjalnego oglądają budują i kradną co jest łądne</td>
+        <td>Sprzedaje kupuje i rucha wielbłądy numer 1 numero 2 jeden z najchujowszych sprzedawców</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <div class="glass-box">
+    <h2>Potwory Endu</h2>
+    <table>
+      <tr>
+        <td>Starożytny władca</td>
+        <td>Strażnik</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Jest słaby, przestarzały ale super mądry jego wiedza to jedyne co potrzebuje. Żyje i mądrzeje.</td>
+        <td>Broni smoka jak on żyje smok żyje</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  
+  </div>
+</body>
+</html>
