@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Apocalypse SkullOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #2b0000, #000);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+
+    }
+
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Logo video */
+    .logo {
+      width: 200px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .brand {
+      font-size: 3rem;
+      font-weight: bold;
+      animation: shake 1.8s infinite;
+      text-shadow: 0 0 10px red;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(1px, 1px); }
+      20% { transform: translate(-2px, 0); }
+      40% { transform: translate(2px, 1px); }
+      60% { transform: translate(-1px, -2px); }
+      80% { transform: translate(1px, 2px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    .side-button {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 0, 0, 0.2);
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 0 10px red;
+      backdrop-filter: blur(8px);
+    }
+
+    .side-button.left { left: 20px; }
+    .side-button.right { right: 20px; }
+
+    .side-button.right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+
+    .panel-left {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      width: 300px;
+      background: rgba(20, 0, 0, 0.9);
+      padding: 30px;
+      transition: left 0.5s ease;
+      z-index: 998;
+      backdrop-filter: blur(10px);
+      box-shadow: 10px 0 20px rgba(255, 0, 0, 0.4);
+    }
+
+    .panel-left.open {
+      left: 0;
+    }
+
+
+    .link-boxes {
+  display: none;
+}
+
+.link-boxes.open {
+  display: flex;
+}
+
+
+    /* Linki */
+.link-boxes {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 998;
+}
+
+.link-box {
+  background: #222;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 1rem;
+  transform: translateX(100px) rotateY(20deg);
+  opacity: 0;
+  transition: none;
+  pointer-events: none;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+  white-space: nowrap;
+}
+
+/* Pokazuj z animacją po kliknięciu */
+.link-boxes.open .link-box {
+  pointer-events: auto;
+}
+
+.link-boxes.open .link-box:nth-child(1) {
+  animation: slideInRight 0.4s ease-out forwards;
+  animation-delay: 0s;
+}
+.link-boxes.open .link-box:nth-child(2) {
+  animation: slideInRight 0.4s ease-out forwards;
+  animation-delay: 0.15s;
+}
+.link-boxes.open .link-box:nth-child(3) {
+  animation: slideInRight 0.4s ease-out forwards;
+  animation-delay: 0.3s;
+}
+.link-boxes.open .link-box:nth-child(4) {
+  animation: slideInRight 0.4s ease-out forwards;
+  animation-delay: 0.45s;
+}
+.link-boxes.open .link-box:nth-child(5) {
+  animation: slideInRight 0.4s ease-out forwards;
+  animation-delay: 0.6s;
+}
+.link-boxes.open .link-box:nth-child(6) {
+  animation: slideInRight 0.4s ease-out forwards;
+  animation-delay: 0.75s;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px) rotateY(20deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <!-- Przyciski -->
+  <button class="side-button left" onclick="togglePanel('left')">☰</button>
+  <button class="side-button right" onclick="togglePanel('links')">⇧</button>
+
+  <!-- Panel z lewej -->
+  <div id="panel-left" class="panel-left">
+    <h2>Co teraz?</h2>
+    <p>Uciekaj, walcz, kontroluj to są słowa klucz w tym świecie. Świecie gdzie generator wytwarza wiele wersji rzeczywistości. Przechodź wersje i zdobywaj większą wprawe w tej skąplikowanej katastrofie</p>
+  </div>
+
+  <!-- Główna zawartość -->
+  <div class="container">
+    <video src="logoskull.mp4" autoplay muted playsinline class="logo" id="logoVideo"></video>
+    <div class="brand">SkullOS</div>
+
+<div id="link-boxes" class="link-boxes">
+  <a href="ipsignal.html" class="link-box">📢 Ogłoszenia</a>
+  <a href="zasadyswiata.html" class="link-box">📜 Zasady</a>
+  <a href="MonsterInformations.html" class="link-box">👹 Potwory</a>
+  <a href="rodzajeidziałanie.html" class="link-box">📊 Głosowania</a>
+  <a href="Lordowiebogowieistoty.html" class="link-box">𒀱 Istoty</a>
+  <a href="aktualnyserver.html" class="link-box">👁 Aktualny server</a>
+  <a href="index.html" class="link-box">👿 Logout</a>
+</div>
+  </div>
+
+  <script>
+    function togglePanel(which) {
+      if (which === 'left') {
+        document.getElementById("panel-left").classList.toggle("open");
+      } else if (which === 'links') {
+        document.getElementById("link-boxes").classList.toggle("open");
+      }
+    }
+
+  const video = document.getElementById("logoVideo");
+
+  const stopTime = 14;
+
+  const interval = setInterval(() => {
+    if (video.currentTime >= stopTime) {
+      video.pause();
+      video.currentTime = stopTime;
+      clearInterval(interval);
+    }
+  }, 100);
+
+/*animacje*/
+function togglePanel(which) {
+  if (which === 'left') {
+    document.getElementById("panel-left").classList.toggle("open");
+  } else if (which === 'links') {
+    document.getElementById("link-boxes").classList.toggle("open");
+  }
+}
+
+  </script>
+</body>
+</html>
